@@ -28,6 +28,7 @@ shared MCP, and portal workflow, start with the
 | [`simple_rest_lifecycle.py`](simple_rest_lifecycle.py) | Create a simple Agent with REST, or retrieve an existing Agent. |
 | [`basic_voice_agent.py`](basic_voice_agent.py) | Create and version a basic Agent, or connect to an existing Agent, then converse through the microphone. |
 | [Foundry GPT Live / OpenAI Python SDK sample](gpt_live/README.md) | Create an English-teacher agent or reuse `AGENT_NAME`, stream microphone audio with Responses delegation, and print the conversation ID and download command after close. |
+| [SIP Voice Agent with GPT Live](sip-voice-agent/README.md) | Create a GPT Live Agent, create or reuse a SIP inbound Connection, bind it, inspect call records, and remove test routing. Includes digest/IP ACL setup and offline tests. |
 | [`voice_agent_with_mcp.py`](voice_agent_with_mcp.py) | Create an MCP Agent, converse through the microphone, and display tool arguments and output. |
 | [`voice_agent_with_foundry_iq.py`](voice_agent_with_foundry_iq.py) | Create a Foundry IQ Agent, converse through the microphone, and display tool activity. |
 | [`voice_agent_with_local_function.py`](voice_agent_with_local_function.py) | Execute `add_numbers` in the client, return its output, and hear the response. |
@@ -50,6 +51,10 @@ The common Python SDK samples require `azure-ai-projects>=2.7.0` from PyPI.
 The GPT Live terminal sample uses the shared `VoiceAgent/.venv` with additional
 pinned packages and the OpenAI Live SDK. Follow its own README for configuration
 and installation.
+
+The SIP sample is standalone and uses its own `requirements.txt` and local
+configuration. Follow its README for SIP client/PBX setup; it does not open a
+local microphone or require the Projects SDK or PortAudio.
 
 ## Common Python sample prerequisites
 
